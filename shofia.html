@@ -1,44 +1,60 @@
-<!DOCTYPE html>  
-<html lang="id">  
-<head>  
-  <meta charset="UTF-8">  
-  <title>Untuk Shofia 💖</title>  
-</head>  
-<body style="  
-  text-align:center;  
-  font-family: 'Arial', sans-serif;  
-  background: linear-gradient(#ff9a9e, #fad0c4);  
-  color: #fff;  
-  padding-top: 80px;  
-">  
-  
-  <h1>🎂 Selamat Ulang Tahun 🎂</h1>  
-  <h2>Shofia Difa Aulia 💖</h2>  
-  
-  <p style="font-size:18px; padding: 0 20px;">  
-    Semoga di hari spesial ini, kamu selalu diberi kesehatan,  
-    kebahagiaan, dan semua mimpi indahmu bisa tercapai ✨    
-    Terima kasih sudah hadir dan mewarnai hidup aku 🤍  
-  </p>  
-  
-  <button onclick="kejutan()" style="  
-    margin-top: 30px;  
-    padding: 12px 25px;  
-    font-size: 16px;  
-    border: none;  
-    border-radius: 20px;  
-    background: #ff4081;  
-    color: white;  
-    cursor: pointer;  
-  ">  
-    Klik untuk pesan cinta 💌  
-  </button>  
-  
-  <script>  
-    function kejutan() {  
-      alert("Aku sayang kamu, Shofia 💖\nSemoga kita selalu bersama 🤍");  
-    }  
-  </script>  
-  
-</body>  
-</html>  
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Shofia 💖</title>
+</head>
+<body style="
+  text-align:center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(#ff9a9e, #fad0c4);
+  color: #fff;
+  padding-top: 60px;
+">
+
+  <h1>🎂 Selamat Ulang Tahun 🎂</h1>
+  <h2>Shofia Difa Aulia 💖</h2>
+
+  <!-- FOTO -->
+  <img src="foto.jpg" alt="Foto Shofia" style="
+    width: 250px;
+    border-radius: 20px;
+    margin: 20px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  ">
+
+  <p style="font-size:18px; padding: 0 20px;">
+    Semoga di hari spesial ini, kamu selalu diberi kesehatan,
+    kebahagiaan, dan semua mimpi indahmu bisa tercapai ✨  
+    Terima kasih sudah hadir dan mewarnai hidup aku 🤍
+  </p>
+
+  <!-- AUDIO -->
+  <audio id="musik" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <!-- TOMBOL -->
+  <button onclick="kejutan()" style="
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background: #ff4081;
+    color: white;
+    cursor: pointer;
+  ">
+    💌 Klik untuk pesan cinta
+  </button>
+
+  <script>
+    function kejutan() {
+      document.getElementById("musik").play();
+      alert("Aku sayang kamu, Shofia 💖\nSemoga kita selalu bersama 🤍");
+    }
+  </script>
+
+</body>
+</html>
