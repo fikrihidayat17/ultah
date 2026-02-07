@@ -10,14 +10,14 @@
       font-family: Arial, sans-serif;
       background: linear-gradient(#ff9a9e, #fad0c4);
       color: #fff;
-      padding-top: 60px;
+      padding-top: 50px;
       overflow: hidden;
     }
 
     .love {
       position: fixed;
       bottom: -20px;
-      font-size: 24px;
+      font-size: 28px;
       animation: naik 6s linear forwards;
       opacity: 0.8;
     }
@@ -28,20 +28,36 @@
         opacity: 1;
       }
       100% {
-        transform: translateY(-110vh) scale(1.8);
+        transform: translateY(-110vh) scale(2);
         opacity: 0;
       }
     }
 
+    /* BUTTON DIBESARKAN */
     button {
-      margin-top: 25px;
-      padding: 12px 25px;
-      font-size: 16px;
+      margin-top: 35px;
+      padding: 20px 45px;
+      font-size: 22px;
       border: none;
-      border-radius: 20px;
+      border-radius: 35px;
       background: #ff4081;
       color: white;
       cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    /* FOTO DIBESARKAN */
+    .foto {
+      width: 650px;
+      max-width: 90%;
+      border-radius: 25px;
+      margin: 25px 0;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.35);
     }
   </style>
 </head>
@@ -52,19 +68,16 @@
   <h2>Shofia Difa Aulia 💖</h2>
 
   <!-- FOTO -->
-  <img src="20251109_171556.jpg" alt="Foto Kita" style="
-    width: 500px;
-    border-radius: 20px;
-    margin: 20px 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  ">
+  <img src="20251109_171556.jpg" alt="Foto Kita" class="foto">
 
-  <p style="font-size:18px; padding: 0 20px;">
-    Semoga di hari spesial ini, kamu selalu diberi kesehatan,
-    kebahagiaan, dan semua mimpi indahmu bisa tercapai ✨  
+  <p style="font-size:20px; padding: 0 25px;">
+    Happy Birthday Sayang, Barakallahufiumrik, Semoga di hari spesial ini, kamu selalu diberi kesehatan,
+    kebahagiaan, rezeki yang lancar, karir yang bagus kedepan nya dan semua mimpi indahmu bisa tercapai ✨  
+    <br><br>
     Terima kasih sudah hadir dan mewarnai hidup aku 🤍
   </p>
 
+  <!-- MUSIK -->
   <audio id="musik" loop>
     <source src="lagu.mp3" type="audio/mpeg">
   </audio>
@@ -74,6 +87,7 @@
   <script>
     const musik = document.getElementById("musik");
 
+    // MUSIK LANGSUNG MUTER SAAT KLIK HALAMAN (BUKAN BUTTON)
     document.addEventListener("click", function playMusic() {
       musik.play();
       document.removeEventListener("click", playMusic);
@@ -98,7 +112,7 @@
       }, 7000);
     }
 
-    setInterval(buatLove, 500);
+    setInterval(buatLove, 400);
   </script>
 
 </body>
