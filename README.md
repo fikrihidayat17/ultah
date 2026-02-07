@@ -1,2 +1,0 @@
-# ultah
-ultah pasangan
