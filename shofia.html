@@ -14,7 +14,6 @@
       overflow: hidden;
     }
 
-    /* LOVE */
     .love {
       position: fixed;
       bottom: -20px;
@@ -52,7 +51,8 @@
   <h1>🎂 Selamat Ulang Tahun 🎂</h1>
   <h2>Shofia Difa Aulia 💖</h2>
 
-  <img src="foto.jpg" alt="Foto Kita" style="
+  <!-- FOTO -->
+  <img src="20251109_171556.heic" alt="Foto Kita" style="
     width: 250px;
     border-radius: 20px;
     margin: 20px 0;
@@ -65,7 +65,6 @@
     Terima kasih sudah hadir dan mewarnai hidup aku 🤍
   </p>
 
-  <!-- AUDIO -->
   <audio id="musik" loop>
     <source src="lagu.mp3" type="audio/mpeg">
   </audio>
@@ -75,7 +74,6 @@
   <script>
     const musik = document.getElementById("musik");
 
-    // Autoplay setelah klik pertama
     document.addEventListener("click", function playMusic() {
       musik.play();
       document.removeEventListener("click", playMusic);
@@ -85,7 +83,6 @@
       alert("Aku sayang kamu, Shofia 💖\nSemoga kita selalu bersama 🤍");
     }
 
-    // GENERATE LOVE
     function buatLove() {
       const love = document.createElement("div");
       love.className = "love";
