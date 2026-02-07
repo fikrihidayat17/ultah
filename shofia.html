@@ -3,19 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Untuk Shofia 💖</title>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(#ff9a9e, #fad0c4);
+      color: #fff;
+      padding-top: 60px;
+      overflow: hidden;
+    }
+
+    /* LOVE */
+    .love {
+      position: fixed;
+      bottom: -20px;
+      font-size: 24px;
+      animation: naik 6s linear forwards;
+      opacity: 0.8;
+    }
+
+    @keyframes naik {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.8);
+        opacity: 0;
+      }
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 20px;
+      background: #ff4081;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body style="
-  text-align:center;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(#ff9a9e, #fad0c4);
-  color: #fff;
-  padding-top: 60px;
-">
+
+<body>
 
   <h1>🎂 Selamat Ulang Tahun 🎂</h1>
   <h2>Shofia Difa Aulia 💖</h2>
 
-  <!-- FOTO -->
   <img src="foto.jpg" alt="Foto Kita" style="
     width: 250px;
     border-radius: 20px;
@@ -32,28 +68,40 @@
   <!-- AUDIO -->
   <audio id="musik" loop>
     <source src="lagu.mp3" type="audio/mpeg">
-    Browser kamu tidak mendukung audio.
   </audio>
 
-  <!-- TOMBOL -->
-  <button onclick="kejutan()" style="
-    margin-top: 25px;
-    padding: 12px 25px;
-    font-size: 16px;
-    border: none;
-    border-radius: 20px;
-    background: #ff4081;
-    color: white;
-    cursor: pointer;
-  ">
-    💌 Klik untuk pesan cinta
-  </button>
+  <button onclick="pesan()">💌 Pesan Cinta</button>
 
   <script>
-    function kejutan() {
-      document.getElementById("musik").play();
+    const musik = document.getElementById("musik");
+
+    // Autoplay setelah klik pertama
+    document.addEventListener("click", function playMusic() {
+      musik.play();
+      document.removeEventListener("click", playMusic);
+    });
+
+    function pesan() {
       alert("Aku sayang kamu, Shofia 💖\nSemoga kita selalu bersama 🤍");
     }
+
+    // GENERATE LOVE
+    function buatLove() {
+      const love = document.createElement("div");
+      love.className = "love";
+      love.innerHTML = "💖";
+
+      love.style.left = Math.random() * 100 + "vw";
+      love.style.animationDuration = (Math.random() * 3 + 4) + "s";
+
+      document.body.appendChild(love);
+
+      setTimeout(() => {
+        love.remove();
+      }, 7000);
+    }
+
+    setInterval(buatLove, 500);
   </script>
 
 </body>
